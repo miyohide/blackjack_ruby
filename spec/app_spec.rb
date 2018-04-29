@@ -4,8 +4,8 @@ describe App do
       context "player bust" do
         let(:cards) do
           [
-            Card.new(:spade, '10'), Card.new(:spade, 'J'),
-            Card.new(:heart, '2'), Card.new(:heart, '3'),
+            Card.new(:spade, '10'), Card.new(:spade, 'J'),   # playerの手札
+            Card.new(:heart, '2'), Card.new(:heart, '3'),    # dealerの手札
             Card.new(:spade, '2')
           ]
         end
