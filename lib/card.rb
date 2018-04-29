@@ -21,4 +21,8 @@ class Card
       @number.to_i
     end
   end
+
+  def to_s
+    "#{@suit}の#{@number}"
+  end
 end
