@@ -11,7 +11,7 @@ class Dealer
   end
 
   def finished?
-    total >= 21
+    total >= 17
   end
 
   def total

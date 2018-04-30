@@ -21,13 +21,15 @@ class App
     puts dealer_card(@dealer.cards[0])
     puts "ディーラーの2枚目のカードは分かりません"
 
-    play_game
+    result = play_game
+
+    puts result_message(result)
 
     puts "さようなら。また遊んでね。"
   end
   
   def player_card(card)
-    "あなたのカードは#{card}です"
+    "あなたのカードは#{card}です。"
   end
 
   def dealer_card(card)
@@ -89,6 +91,17 @@ class App
       break if %w(y n).include?(input)
     end
     input == "y"
+  end
+
+  def result_message(result)
+    case result
+    when :win
+      "プレイヤーが勝ちました。"
+    when :lose
+      "ディーラーが勝ちました。"
+    when :draw
+      "引き分けとなりました。"
+    end
   end
 end
 
